@@ -1,0 +1,148 @@
+.controls {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+  margin-top: 20px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.field input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.field input[type="file"] {
+  display: none;
+}
+
+.field .file-label {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.field .file-label:hover {
+  background-color: #45a049;
+}
+
+.field .file-label:active {
+  background-color: #388e3c;
+}
+
+.download-btn {
+  background-color: #604cc3;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+}
+
+.download-btn:hover {
+  background-color: #4c34c5;
+  transform: scale(1.05);
+}
+
+.color-picker {
+  width: 40px;
+  height: 40px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.color-picker:hover {
+  opacity: 0.8;
+}
+
+.color-picker:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.theme-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.theme-btn {
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.theme-btn.active {
+  outline: 2px solid #000;
+}
+
+.font-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.font-btn {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.font-btn.active {
+  border-color: #000;
+}
+
+.bg-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.bg-btn {
+  position: relative;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bg-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-btn.active {
+  outline: 2px solid #000;
+}
