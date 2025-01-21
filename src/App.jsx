@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { Sparkles } from 'lucide-react';
 import './App.css';
@@ -31,13 +30,16 @@ function App() {
       reader.onloadend = () => {
         setBackground(reader.result);
       };
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(file); 
     }
   };
 
   const downloadCard = () => {
     const cardElement = document.querySelector('.card');
-    html2canvas(cardElement).then((canvas) => {
+    html2canvas(cardElement, {
+      useCORS: true, 
+      allowTaint: true, 
+    }).then((canvas) => {
       const link = document.createElement('a');
       link.href = canvas.toDataURL('image/png');
       link.download = 'card.png';
